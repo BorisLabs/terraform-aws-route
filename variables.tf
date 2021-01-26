@@ -14,4 +14,9 @@ variable "transit_gateway_id" {
   description = "ID of Transit Gateway to associate route to"
   default     = ""
 }
+
+variable "route_table_id" {
+  description = "Route table ID to search for"
+  default     = null
+  type        = string
 }
