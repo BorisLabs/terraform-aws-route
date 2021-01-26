@@ -6,11 +6,17 @@ variable "route_table_lookup_tags" {
 
 variable "routes" {
   description = "List of routes to be added to route table"
-  default = []
-  type = list(string)
+  default     = []
+  type        = list(string)
 }
 
 variable "transit_gateway_id" {
   description = "ID of Transit Gateway to associate route to"
-  default = ""
+  default     = ""
+}
+
+variable "route_table_id" {
+  description = "Route table ID to search for"
+  default     = null
+  type        = string
 }

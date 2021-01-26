@@ -1,5 +1,6 @@
 data "aws_route_table" "this" {
-  tags = var.route_table_lookup_tags
+  tags           = var.route_table_lookup_tags
+  route_table_id = var.route_table_id
 }
 
 resource "aws_route" "to_tgw" {
