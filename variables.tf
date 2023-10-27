@@ -17,7 +17,7 @@ variable "transit_gateway_id" {
 
 variable "route_table_ids" {
   description = "Route table IDs to add routes to."
-  default     = null
+  default     = []
   type        = list(string)
 }
 

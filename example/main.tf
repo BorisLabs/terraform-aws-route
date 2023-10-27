@@ -17,3 +17,12 @@ module "test_routes_and_prefixes" {
   routes          = ["192.168.0.1/32", "192.168.0.2/32"]
   prefix_list_ids = ["pl-12345678"]
 }
+
+module "test_routes_and_prefixes_lookup" {
+  source          = "../"
+  routes          = ["192.168.0.1/32", "192.168.0.2/32"]
+  prefix_list_ids = ["pl-12345678"]
+  route_table_lookup_tags = {
+    Name = "main-private-route-table"
+  }
+}
