@@ -15,8 +15,14 @@ variable "transit_gateway_id" {
   default     = ""
 }
 
-variable "route_table_id" {
-  description = "Route table ID to search for"
-  default     = null
-  type        = string
+variable "route_table_ids" {
+  description = "Route table IDs to add routes to."
+  default     = []
+  type        = list(string)
+}
+
+variable "prefix_list_ids" {
+  description = "IDs of managed prefix lists to add routes for"
+  default     = []
+  type        = list(string)
 }
