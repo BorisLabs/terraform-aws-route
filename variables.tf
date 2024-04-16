@@ -26,3 +26,9 @@ variable "prefix_list_ids" {
   default     = []
   type        = list(string)
 }
+
+variable "vpc_peering_connection_id" {
+  description = "Optional ID of VPC peering connection - useful if you're creating routes for a peered VPC"
+  default     = ""
+  type        = string
+}
